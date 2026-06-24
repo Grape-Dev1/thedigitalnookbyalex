@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — TheDigitalNookByAlex &amp; All On Black Gaming</title>
+<meta name="description" content="Terms of service covering TheDigitalNookByAlex Etsy shop, the AOB x LOS Scrim Hub, and the Nook Command Center.">
+
+<!--
+  Static, self-contained page, same standard as privacy-policy.html — no build step, no JS
+  framework, no animation libraries (a legal document doesn't need motion). Design system is
+  intentionally identical to privacy-policy.html so the two pages read as one consistent set.
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #050508;
+  --glass-bg: rgba(255,255,255,0.03);
+  --glass-border: rgba(255,255,255,0.08);
+  --accent: #7C5CFC;
+  --accent-soft: rgba(124,92,252,0.12);
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255,255,255,0.6);
+  --text-muted: rgba(255,255,255,0.38);
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(124,92,252,0.08), transparent 45%),
+    radial-gradient(circle at 85% 60%, rgba(124,92,252,0.05), transparent 50%);
+}
+
+h1, h2, h3, .brand { font-family: 'Space Grotesk', sans-serif; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+header.site-header {
+  padding: 56px 0 40px;
+  border-bottom: 1px solid var(--glass-border);
+  animation: fadeIn 0.6s ease-out;
+}
+.brand { font-size: 15px; font-weight: 700; letter-spacing: 0.04em; color: var(--text-secondary); margin-bottom: 18px; }
+.brand .dot { color: var(--accent); }
+h1 { font-size: clamp(28px, 4vw, 40px); font-weight: 700; margin-bottom: 12px; }
+.meta-row { display: flex; gap: 18px; flex-wrap: wrap; font-size: 13.5px; color: var(--text-muted); }
+.meta-row strong { color: var(--text-secondary); font-weight: 600; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+main { padding: 40px 0 80px; }
+
+nav.toc {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(20px);
+  padding: 24px 28px;
+  margin-bottom: 36px;
+}
+nav.toc h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 14px; font-family: 'Inter', sans-serif; font-weight: 600; }
+nav.toc ol { list-style: none; columns: 2; column-gap: 24px; }
+nav.toc li { margin-bottom: 8px; font-size: 14px; break-inside: avoid; }
+nav.toc a { color: var(--text-secondary); }
+nav.toc a:hover { color: var(--accent); text-decoration: none; }
+nav.toc li::before { content: counter(li-counter) ". "; }
+
+section.policy-section {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(20px);
+  padding: 32px 32px 8px;
+  margin-bottom: 24px;
+  scroll-margin-top: 24px;
+}
+section.policy-section h2 {
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+section.policy-section h2 .num { color: var(--accent); font-size: 15px; font-weight: 700; }
+section.policy-section h3 { font-size: 15px; font-weight: 600; color: var(--text-primary); margin: 20px 0 8px; }
+section.policy-section p { color: var(--text-secondary); font-size: 15.5px; margin-bottom: 16px; }
+section.policy-section ul, section.policy-section ol.plain { color: var(--text-secondary); font-size: 15.5px; margin: 0 0 16px 20px; }
+section.policy-section li { margin-bottom: 8px; }
+section.policy-section strong { color: var(--text-primary); font-weight: 600; }
+
+.platform-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--glass-border);
+  border-left: 3px solid var(--accent);
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin-bottom: 16px;
+}
+.platform-card h3 { margin-top: 0; }
+.platform-card p:last-child { margin-bottom: 0; }
+
+.pill-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.pill {
+  font-size: 12px; font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid rgba(124,92,252,0.3);
+}
+
+.warning-card {
+  background: rgba(255,68,102,0.06);
+  border: 1px solid rgba(255,68,102,0.25);
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin-bottom: 16px;
+}
+.warning-card strong { color: #FF8FA3; }
+.warning-card p { margin-bottom: 0; }
+
+table.rights-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; font-size: 14.5px; }
+table.rights-table caption { text-align: left; color: var(--text-muted); font-size: 12.5px; margin-bottom: 8px; }
+table.rights-table th, table.rights-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--glass-border); color: var(--text-secondary); }
+table.rights-table th { color: var(--text-primary); font-weight: 600; font-size: 13px; }
+.table-scroll { overflow-x: auto; margin-bottom: 16px; }
+
+.contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 4px 0 20px; }
+.contact-card { background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); border-radius: 12px; padding: 18px; }
+.contact-card .label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 6px; }
+.contact-card .value { font-size: 15px; font-weight: 600; color: var(--text-primary); }
+.contact-card .sub { font-size: 13px; color: var(--text-secondary); margin-top: 4px; }
+
+footer.site-footer {
+  border-top: 1px solid var(--glass-border);
+  padding: 32px 0 56px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.back-to-top {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 640px) {
+  header.site-header { padding: 40px 0 28px; }
+  nav.toc ol { columns: 1; }
+  section.policy-section { padding: 24px 20px 8px; }
+  .wrap { padding: 0 16px; }
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="site-header">
+    <div class="brand">THEDIGITALNOOKBYALEX <span class="dot">●</span> ALL ON BLACK GAMING</div>
+    <h1>Terms of Service</h1>
+    <div class="meta-row">
+      <span><strong>Effective date:</strong> June 23, 2026</span>
+      <span><strong>Governing law:</strong> United States</span>
+      <span><strong>Applies to:</strong> all platforms listed below</span>
+    </div>
+  </header>
+
+  <main>
+    <nav class="toc" aria-label="Table of contents">
+      <h2>On this page</h2>
+      <ol style="counter-reset: li-counter;">
+        <li style="counter-increment: li-counter;"><a href="#introduction">Introduction</a></li>
+        <li style="counter-increment: li-counter;"><a href="#acceptable-use">Acceptable Use</a></li>
+        <li style="counter-increment: li-counter;"><a href="#purchases">Digital Product Purchases</a></li>
+        <li style="counter-increment: li-counter;"><a href="#scrim-hub-rules">Scrim Hub Rules &amp; ELO Disputes</a></li>
+        <li style="counter-increment: li-counter;"><a href="#discord-conduct">Discord Conduct Standards</a></li>
+        <li style="counter-increment: li-counter;"><a href="#intellectual-property">Intellectual Property</a></li>
+        <li style="counter-increment: li-counter;"><a href="#liability">Limitation of Liability</a></li>
+        <li style="counter-increment: li-counter;"><a href="#governing-law">Governing Law</a></li>
+        <li style="counter-increment: li-counter;"><a href="#termination">Termination</a></li>
+        <li style="counter-increment: li-counter;"><a href="#changes">Changes to These Terms</a></li>
+        <li style="counter-increment: li-counter;"><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
+
+    <section class="policy-section" id="introduction">
+      <h2><span class="num">01</span> Introduction</h2>
+      <p>These Terms of Service ("Terms") govern your use of the platforms operated by Alex, doing business as <strong>TheDigitalNookByAlex</strong> (digital products on Etsy) and <strong>All On Black Gaming</strong> (the AOB gaming community and its LOS x AOB scrim initiative).</p>
+      <p>They cover:</p>
+      <div class="pill-row">
+        <span class="pill">TheDigitalNookByAlex (Etsy)</span>
+        <span class="pill">AOB x LOS Scrim Hub</span>
+        <span class="pill">Nook Command Center</span>
+      </div>
+      <p>By purchasing a digital product, logging into the Scrim Hub, or participating in the AOB or LOS Discord communities, you agree to these Terms. If you don't agree, please don't use these platforms. For how your information is handled, see the companion <a href="/">Privacy Policy</a>.</p>
+    </section>
+
+    <section class="policy-section" id="acceptable-use">
+      <h2><span class="num">02</span> Acceptable Use</h2>
+      <p>Across all three platforms, you agree not to:</p>
+      <ul>
+        <li>Use the platform for any unlawful purpose, or in a way that violates Etsy's or Discord's own terms of service</li>
+        <li>Attempt to gain unauthorized access to accounts, systems, or data that aren't yours</li>
+        <li>Upload, post, or transmit anything abusive, harassing, hateful, or sexually explicit involving minors</li>
+        <li>Impersonate another person, team, or organization, or misrepresent your affiliation with AOB or LOS</li>
+        <li>Interfere with the normal operation of the Scrim Hub, the Discord servers, or any related bot or automation</li>
+        <li>Resell, redistribute, or re-upload purchased digital products as your own without a commercial license that explicitly permits it</li>
+      </ul>
+      <div class="platform-card">
+        <h3>TheDigitalNookByAlex</h3>
+        <p>You agree to use purchased digital files for their intended purpose (personal or, where the listing explicitly grants it, commercial use) and not to redistribute the source files themselves as a competing product.</p>
+      </div>
+      <div class="platform-card">
+        <h3>AOB x LOS Scrim Hub</h3>
+        <p>You agree to participate in scrims in good faith — accurate roster information, honest score reporting, and no manipulation of matchmaking or results.</p>
+      </div>
+      <div class="platform-card">
+        <h3>Nook Command Center</h3>
+        <p>This is an internal operations tool. If you've been given access, you agree to use it only for its intended business-operations purpose.</p>
+      </div>
+    </section>
+
+    <section class="policy-section" id="purchases">
+      <h2><span class="num">03</span> Digital Product Purchases</h2>
+      <p>All products sold through TheDigitalNookByAlex are <strong>instant digital downloads</strong> — Canva templates, PDF guides, prompt packs, and similar files. Because of the nature of digital goods, the following terms apply:</p>
+      <div class="warning-card">
+        <p><strong>No refunds on digital downloads.</strong> Once a digital file has been delivered, the sale is final. Because the product can be copied and used immediately upon delivery, we're unable to offer refunds, exchanges, or cancellations after purchase — this is consistent with standard practice for instant-download digital goods on Etsy.</p>
+      </div>
+      <p>Exceptions are made only in cases where:</p>
+      <ul>
+        <li>The file you received is genuinely broken, corrupted, or significantly different from what was described in the listing</li>
+        <li>You were charged in error (e.g., a duplicate purchase)</li>
+      </ul>
+      <p>In either case, contact us through Etsy Messages within a reasonable time of purchase and we'll work with you directly — see <a href="#contact">Contact</a>. All payment processing, billing disputes, and Etsy's own buyer protection policies are handled through Etsy directly, not by us; see our Privacy Policy's "Etsy Shop" section for how that division of responsibility works.</p>
+    </section>
+
+    <section class="policy-section" id="scrim-hub-rules">
+      <h2><span class="num">04</span> Scrim Hub Rules &amp; ELO Disputes</h2>
+      <p>The AOB x LOS Scrim Hub exists to organize and track competitive scrims between participating teams. By using it, you agree to the following:</p>
+      <h3>General Rules</h3>
+      <ul>
+        <li>Rosters submitted must accurately reflect who actually played in a given scrim</li>
+        <li>Scores and results must be reported honestly and promptly</li>
+        <li>No-shows, deliberate stalling, or repeated scheduling abuse may result in scrim privileges being suspended</li>
+      </ul>
+      <h3>ELO &amp; Ranking Disputes</h3>
+      <p>ELO or ranking adjustments are calculated based on reported match outcomes. If you believe a result or ELO adjustment is incorrect:</p>
+      <ul>
+        <li>Raise the dispute through the designated Discord channel (e.g. <strong>#patch-notes</strong> or a staff-facing ticket) within 48 hours of the match in question</li>
+        <li>Include both teams' account of the match — disputes raised without the opposing team's input will take longer to resolve</li>
+        <li>Staff decisions on ELO disputes are final. We aim to be fair and consistent, but ELO is an internal community ranking system, not a competitive league with formal arbitration</li>
+      </ul>
+      <p>We reserve the right to void, adjust, or roll back ELO changes found to be the result of manipulation, collusion, or a reporting error.</p>
+    </section>
+
+    <section class="policy-section" id="discord-conduct">
+      <h2><span class="num">05</span> Discord Conduct Standards</h2>
+      <p>Participation in the AOB or LOS Discord servers (including the tryout ticket system, scrim coordination channels, and general community spaces) requires following these conduct standards, in addition to Discord's own Terms of Service and Community Guidelines:</p>
+      <ul>
+        <li>Treat staff (Owner, Admin, Staff roles) and other members with basic respect — disagreements happen, harassment doesn't</li>
+        <li>No hate speech, slurs, or discriminatory content of any kind</li>
+        <li>No spamming channels, pinging staff unnecessarily, or abusing the ticket/suggestion systems</li>
+        <li>Channels marked for a specific purpose (e.g. <strong>#suggestions</strong>, <strong>#free-agent</strong>, <strong>#roster</strong>, <strong>#tryout-request</strong>) should be used for that purpose</li>
+        <li>The 🔒 Staff category and its channels are restricted — attempting to bypass that restriction is a serious violation</li>
+      </ul>
+      <p>Staff may issue warnings, mute, kick, or ban members who violate these standards, at their discretion, proportional to the severity and frequency of the violation. Server-specific role and channel structure may change over time as the community grows.</p>
+    </section>
+
+    <section class="policy-section" id="intellectual-property">
+      <h2><span class="num">06</span> Intellectual Property</h2>
+      <p>All templates, designs, written guides, prompt packs, logos, and other digital products sold through TheDigitalNookByAlex are the intellectual property of Alex / TheDigitalNookByAlex unless explicitly stated otherwise in the listing.</p>
+      <ul>
+        <li>Purchasing a product grants you a license to use it per the terms stated in that specific listing (typically personal use, or commercial use where explicitly stated) — it does not transfer ownership of the underlying design or template itself</li>
+        <li>You may not resell, redistribute, or claim authorship of the source files, templates, or guides themselves</li>
+        <li>The "TheDigitalNookByAlex," "All On Black Gaming," and "LOS x AOB" names, along with associated logos and branding, are the property of their respective operators and may not be used to imply endorsement without permission</li>
+        <li>If you believe your own intellectual property has been used on any of these platforms without permission, contact us via the methods in <a href="#contact">Contact</a> so we can review and address it</li>
+      </ul>
+    </section>
+
+    <section class="policy-section" id="liability">
+      <h2><span class="num">07</span> Limitation of Liability</h2>
+      <p>These platforms are provided <strong>"as is" and "as available,"</strong> without warranties of any kind, express or implied, to the fullest extent permitted by law.</p>
+      <ul>
+        <li>We are not liable for any indirect, incidental, special, or consequential damages arising from your use of (or inability to use) TheDigitalNookByAlex, the Scrim Hub, the Nook Command Center, or any associated Discord community</li>
+        <li>We do not guarantee uninterrupted, error-free, or continuously available service — these are small, independently operated platforms, not enterprise infrastructure with formal uptime guarantees</li>
+        <li>We are not responsible for the actions of third-party services we rely on (Etsy, Discord, Pinterest, hosting providers) or for outages, policy changes, or data loss on their end</li>
+        <li>Our total liability for any claim arising from these platforms, to the extent permitted by law, is limited to the amount you actually paid us in the 12 months preceding the claim — which, for most users of the free Scrim Hub and Discord communities, is zero</li>
+      </ul>
+      <p>Nothing in this section is intended to limit liability in ways not permitted under applicable law.</p>
+    </section>
+
+    <section class="policy-section" id="governing-law">
+      <h2><span class="num">08</span> Governing Law</h2>
+      <p>These Terms are governed by the laws of the United States, without regard to conflict-of-law principles. Any dispute arising from these Terms or your use of these platforms will be resolved under U.S. law.</p>
+      <p>Etsy-specific transactions remain additionally subject to Etsy's own Terms of Use and applicable marketplace policies, and Discord-based interactions remain additionally subject to Discord's own Terms of Service.</p>
+    </section>
+
+    <section class="policy-section" id="termination">
+      <h2><span class="num">09</span> Termination</h2>
+      <p>We may suspend or terminate your access to the Scrim Hub, the Discord communities, or related platforms at our discretion, for violations of these Terms, the Discord Conduct Standards above, or applicable law — particularly for repeated or severe violations.</p>
+      <p>You may stop using any of these platforms at any time. Purchases already made through Etsy are governed by the purchase terms above and are not affected by later account termination on the Scrim Hub or Discord.</p>
+    </section>
+
+    <section class="policy-section" id="changes">
+      <h2><span class="num">10</span> Changes to These Terms</h2>
+      <p>These Terms may be updated from time to time — for example, as the Scrim Hub's rules evolve or new platforms launch. When that happens:</p>
+      <ul>
+        <li>The "Effective date" at the top of this page will be updated to reflect the most recent revision</li>
+        <li>Material changes will be called out clearly rather than buried in unrelated edits</li>
+        <li>Continued use of any platform after an update means you accept the revised Terms — if you disagree with a change, the right step is to stop using that platform</li>
+      </ul>
+    </section>
+
+    <section class="policy-section" id="contact">
+      <h2><span class="num">11</span> Contact</h2>
+      <p>Questions about these Terms should go through the platform you're already using:</p>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="label">Etsy Shop Inquiries</div>
+          <div class="value">Etsy Messages</div>
+          <div class="sub">Message TheDigitalNookByAlex directly through Etsy for anything related to a purchase, a listing, or these Terms as they relate to the shop.</div>
+        </div>
+        <div class="contact-card">
+          <div class="label">Gaming / Scrim Hub Inquiries</div>
+          <div class="value">Discord</div>
+          <div class="sub">Reach out through the All On Black Gaming or LOS x AOB Discord server for anything related to Scrim Hub rules, ELO disputes, or community conduct.</div>
+        </div>
+      </div>
+      <p>By using any of the platforms covered by these Terms, you acknowledge that you've read, understood, and agree to be bound by them, as described above.</p>
+      <p><a class="back-to-top" href="#introduction">↑ Back to top</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>TheDigitalNookByAlex &amp; All On Black Gaming — Terms of Service — Effective June 23, 2026</p>
+  </footer>
+</div>
+
+</body>
+</html>
