@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Legal — TheDigitalNookByAlex &amp; All On Black Gaming</title>
+<meta name="description" content="Legal documents for TheDigitalNookByAlex, All On Black Gaming, the AOB x LOS Scrim Hub, and related platforms.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #050508;
+  --glass-bg: rgba(255,255,255,0.03);
+  --glass-border: rgba(255,255,255,0.08);
+  --accent: #7C5CFC;
+  --accent-soft: rgba(124,92,252,0.12);
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255,255,255,0.6);
+  --text-muted: rgba(255,255,255,0.38);
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(124,92,252,0.08), transparent 45%),
+    radial-gradient(circle at 85% 60%, rgba(124,92,252,0.05), transparent 50%);
+}
+
+h1, h2, .brand { font-family: 'Space Grotesk', sans-serif; }
+a { color: var(--accent); text-decoration: none; }
+
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+header.site-header {
+  padding: 64px 0 36px;
+  border-bottom: 1px solid var(--glass-border);
+}
+.brand { font-size: 15px; font-weight: 700; letter-spacing: 0.04em; color: var(--text-secondary); margin-bottom: 18px; }
+.brand .dot { color: var(--accent); }
+h1 { font-size: clamp(28px, 4vw, 40px); font-weight: 700; margin-bottom: 12px; }
+.subtitle { color: var(--text-secondary); font-size: 15.5px; max-width: 560px; }
+
+main { padding: 40px 0 80px; }
+
+.doc-list { display: flex; flex-direction: column; gap: 14px; }
+
+.doc-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(20px);
+  padding: 22px 26px;
+  transition: background 0.15s, border-color 0.15s;
+}
+.doc-card.available { cursor: pointer; }
+.doc-card.available:hover { background: rgba(255,255,255,0.05); border-color: rgba(124,92,252,0.35); }
+.doc-card .doc-info h2 { font-size: 17px; font-weight: 600; margin-bottom: 4px; color: var(--text-primary); }
+.doc-card .doc-info p { font-size: 13.5px; color: var(--text-secondary); }
+.doc-card .status-pill {
+  font-size: 11.5px; font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.status-pill.live { background: rgba(0,255,136,0.12); color: #00FF88; border: 1px solid rgba(0,255,136,0.3); }
+.status-pill.soon { background: rgba(255,255,255,0.06); color: var(--text-muted); border: 1px solid var(--glass-border); }
+
+.doc-card-link { display: block; }
+
+footer.site-footer {
+  border-top: 1px solid var(--glass-border);
+  padding: 28px 0 56px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+@media (max-width: 560px) {
+  header.site-header { padding: 48px 0 28px; }
+  .doc-card { flex-direction: column; align-items: flex-start; gap: 10px; }
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="site-header">
+    <div class="brand">THEDIGITALNOOKBYALEX <span class="dot">●</span> ALL ON BLACK GAMING</div>
+    <h1>Legal</h1>
+    <p class="subtitle">Legal documents covering TheDigitalNookByAlex, All On Black Gaming, the AOB x LOS Scrim Hub, and related platforms.</p>
+  </header>
+
+  <main>
+    <div class="doc-list">
+      <a class="doc-card-link" href="privacy-policy/">
+        <div class="doc-card available">
+          <div class="doc-info">
+            <h2>Privacy Policy</h2>
+            <p>How information is collected, used, and protected across our platforms.</p>
+          </div>
+          <span class="status-pill live">Live</span>
+        </div>
+      </a>
+
+      <div class="doc-card">
+        <div class="doc-info">
+          <h2>Terms of Service</h2>
+          <p>Usage terms for the Etsy shop, Scrim Hub, and community platforms.</p>
+        </div>
+        <span class="status-pill soon">Coming soon</span>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>TheDigitalNookByAlex &amp; All On Black Gaming — Legal Documents</p>
+  </footer>
+</div>
+
+</body>
+</html>
